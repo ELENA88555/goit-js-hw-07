@@ -44,9 +44,22 @@ function handleModalClick(event) {
   instance.show();
   console.log(target.dataset.source);
 
-  document.addEventListener("keydown", (event) => {
+
+ function handleClick (event) {
     if (event.code === "Escape") {
       instance.close();
     }
-  });
+  };
+ 
+ document.addEventListener("keydown", handleClick)
+
+//  function addRemuveListener() {
+//   if(instance.show()) {
+//     document.addEventListener("keydown", handleClick)
+//   } document.removeEventListener("keydown", handleClick)
+// }
+
 }
+
+
+
